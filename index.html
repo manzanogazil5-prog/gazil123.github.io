@@ -5,7 +5,140 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Jhumel Andrada Manzano | Portfolio</title>
+/* =========================
+   GALLERY
+========================= */
 
+#gallery {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 40px 100px;
+}
+
+.gallery-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 45px;
+}
+
+.gallery-heading h2 {
+    font-size: clamp(45px, 6vw, 70px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    font-weight: 500;
+    margin: 0;
+    max-width: 750px;
+}
+
+.gallery-heading p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 250px;
+    margin: 5px 0 0;
+}
+
+
+/* Gallery photo layout */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.9fr 0.9fr;
+    grid-template-rows: 260px 260px;
+    gap: 18px;
+}
+
+
+/* Each photo */
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 5px;
+    background: #2b382f;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+
+/* First photo = large */
+
+.gallery-large {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+
+/* Fourth photo = wide */
+
+.gallery-wide {
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+
+
+/* Hover */
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   GALLERY MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    #gallery {
+        padding: 65px 25px;
+    }
+
+    .gallery-heading {
+        display: block;
+    }
+
+    .gallery-heading h2 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .gallery-heading p {
+        margin-top: 25px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 200px 200px;
+        gap: 12px;
+    }
+
+    .gallery-large {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .gallery-item:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .gallery-item:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .gallery-wide {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+}
 <style>
 
 /* =========================
@@ -877,7 +1010,83 @@ footer {
     <!-- =========================
          CONTACT
     ========================= -->
+<!-- =========================
+     GALLERY
+========================= -->
 
+<section id="gallery">
+
+    <div class="section-number">
+        02 / GALLERY
+    </div>
+
+
+    <div class="gallery-heading">
+
+        <h2>
+            Moments worth remembering.
+        </h2>
+
+        <p>
+            A collection of academic,
+            community, and recreational
+            experiences.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <!-- 1. GYM -->
+        <div class="gallery-item gallery-large">
+
+            <img
+                src="GYM.jpeg"
+                alt="Gym experience"
+            >
+
+        </div>
+
+
+        <!-- 2. CHAMP -->
+        <div class="gallery-item">
+
+            <img
+                src="champ.jpeg"
+                alt="Basketball experience"
+            >
+
+        </div>
+
+
+        <!-- 3. TROPA -->
+        <div class="gallery-item">
+
+            <img
+                src="tropa.jpeg"
+                alt="Friends experience"
+            >
+
+        </div>
+
+
+        <!-- 4. RECEIVED PHOTO -->
+        <div class="gallery-item gallery-wide">
+
+            <img
+                src="received_1749373812960894.jpeg"
+                alt="Group experience"
+            >
+
+        </div>
+
+    </div>
+
+</section>  
+   <!-- =========================
+         CONTACT
+    ========================= -->
     <section id="contact">
 
         <div class="section-number">
